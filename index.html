@@ -4,51 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🌡 Weather wizard</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="src/style.css" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Tangerine:wght@700&display=swap"
         rel="stylesheet">
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>🌡 Weather wizard</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="card" style="width= 60rem;">
+        <div class="card" id="card" style="width= 60rem;">
 
             <form id="location-form">
                 <input type="text" id="city-input" placeholder="   Search a city..." autocomplete="off"
                     autofocus="on" />
                 <input type="submit" style="padding: 7px;border-radius: 25px" value="✨" />
             </form>
-            <h1 class="cityName" id="city">Cityname</h1>
 
-
-            <div class="condition">
-                <h2 class="cityCondition" id="condition">Condition</h2>
-                <h2 class="cityTemp" id="temperature">
-                    <span id="celsius"></span>°C
-                    |
-                    <span id="farenheit"></span>°F
-                </h2>
-
-                <h2>Humidity: <span id="humidyty"></span>%</h2>
-                <h2>Feels like: <span id="feels_like"></span> </h2>
+            <div class="dateHour" id="dateNow">
+                <h2></h2>
             </div>
-
-            <div class=forecast-box>
-                <ul>
-                    <li class="dailyForecast" id="forecast-day">Day 1</li>
-                    <li class="dailyForecast" id="forecast-day">Day 2</li>
-                    <li class="dailyForecast" id="forecast-day">Day 3</li>
-                    <li class="dailyForecast" id="forecast-day">Day 4</li>
-                    <li class="dailyForecast" id="forecast-day">Day 5</li>
-                </ul>
+            <div class="typewriter">
+                <h1 class="cityName" id="city"></h1>
             </div>
+            <ul>
+                <img src="" alt="Clear" id="icon" class="float-center" />
+                <li class="cityCondition" id="condition"></li>
+                <div>
+                    <span class="temperature" id="temperature"></span>
+                    <br>
+                    <span class="units"><a href="#" id="celsius" class="active">ºC</a> | <a href="#"
+                            id="fahrenheit">ºF</a></span>
+                </div>
+
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Feels like: <span id="feels-like"></span>°C</li>
+
+            </ul>
+
+
+            <small>
+                <a href="https://github.com/MiandryR/Vanilla-project---Weather-wizard" target="_blank">Open-source
+                    code</a>
+                edited by Mia Ranaivo.
+
+            </small>
         </div>
-    </div>
-    </div>
+
     </div>
 </body>
-<script type="text/javascript" src="script.js"></script>
+
+</body>
+<script type="text/javascript" src="src/script.js"></script>
 
 </html>

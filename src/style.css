@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #44280a;
+  font-family: "Special Elite", cursive;
+}
+
+.card {
+  margin: 0 auto;
+  padding: 0 auto;
+  text-align: center;
+  border: 2px red solid;
+  width: 435px;
+  height: 650px;
+}
+
+#card {
+  background-image: url("img/parchment.jpg");
+}
+
+.cityName {
+  font-family: "Tangerine", cursive;
+  font-size: 35px;
+  width: 50%;
+  margin: 0;
+}
+
+.dateHour {
+  font-size: 8px;
+}
+
+form {
+  margin-top: 75px;
+}
+
+h2 {
+  font-size: 14px;
+}
+
+location-form {
+  background-color: transparent;
+}
+
+.temperature {
+  font-size: 30px;
+  font-style: bold;
+}
+
+#city-input {
+  border-width: 0px;
+  border-radius: 25px;
+  border: 0px;
+  height: 40px;
+  width: 200px;
+  margin: 10px 0px;
+  font-family: "Special Elite", cursive;
+}
+
+row {
+  display: inline-grid;
+  padding-left: 0px;
+}
+
+#forecast-day {
+  display: inline;
+  margin: 0px 15px 5px auto;
+  padding-top: 5px;
+  width: 300px;
+  height: 40px;
+  border-radius: 15px;
+  border: none;
+  background: #ffffff90;
+}
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.1em solid rgb(71, 40, 10); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(71, 40, 10);
+  }
+}
+
+.row {
+  margin-top: 50px;
+}
+
+small {
+  color: #ffffff;
+  font-size: 8px;
+  position: bottom;
+}
+
+a {
+  color: #b22222;
+}
