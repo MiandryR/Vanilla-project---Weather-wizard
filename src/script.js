@@ -54,18 +54,21 @@ function showWeather(response) {
   let tempElement = document.querySelector("#temperature");
   let humidityElement = document.querySelector("#humidity");
   let feelslikeElement = document.querySelector("#feels-like");
+  let windspeedElement = document.querySelector("#windspeed");
   let iconElement = document.querySelector("#icon");
   
   celsiusTemp = response.data.main.temp;
   celsiusFeelsLike = response.data.main.feels_like;
   celsiusMin = response.data.main.temp_min;
   celsiusMax = response.data.main.temp_max;
+  kmhWindspeed = response.data.wind.speed;
 
   conditionElement.innerHTML = response.data.weather[0].main;
   cityElement.innerHTML = response.data.name;
   tempElement.innerHTML = Math.round(celsiusTemp);
   humidityElement.innerHTML = response.data.main.humidity;
   feelslikeElement.innerHTML = Math.round(celsiusFeelsLike);
+  windspeedElement.innerHTML = Math.round(kmhWindspeed);
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -104,7 +107,7 @@ function showForecast(response) {
 }
 
 function hideElement() {
-  document.getElementById("signC").style.visibility = "hidden";
+  document.getElementById("sign-metric").style.visibility = "hidden";
 }
 
 function search(city) {
@@ -135,6 +138,10 @@ function displayFahrenheitTemp(event) {
   let fahrenheitFeelslike = celsiusFeelsLike * 1.8 + 32;
   let feelslikeElement = document.querySelector("#feels-like");
   feelslikeElement.innerHTML = `${Math.round(fahrenheitFeelslike)}ºF`;
+
+  let mhWindspeed = kmhWindspeed * 1.609344;
+  let windspeedElement = document.querySelector("#windspeed");
+  windspeedElement.innerHTML = `${Math.round(mhWindspeed)}mh`;
 }
 
 function displayCelsiusTemp(event) {
@@ -144,10 +151,14 @@ function displayCelsiusTemp(event) {
 
   let feelslikeElement = document.querySelector("#feels-like");
   feelslikeElement.innerHTML = `${Math.round(celsiusFeelsLike)}ºC`;
+
+  let windspeedElement = document.querySelector("#windspeed");
+  windspeedElement.innerHTML = `${Math.round(kmhWindspeed)}km/h`;
 }
 
 let celsiusTemp = null;
 let celsiusFeelsLike = null;
+let kmhWindspeed = null;
 
 let locationForm = document.querySelector("#location-form");
 locationForm.addEventListener("submit", submitCity);
