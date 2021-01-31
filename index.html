@@ -31,30 +31,33 @@
             <div class="typewriter">
                 <h1 class="cityName" id="city"></h1>
             </div>
+
             <ul>
                 <img src="" alt="Clear" id="icon" class="float-center" />
                 <li class="cityCondition" id="condition"></li>
                 <div>
                     <span class="temperature" id="temperature"></span>
                     <br>
-                    <span class="units"><a href="#" id="celsius" class="active">ºC</a> | <a href="#"
-                            id="fahrenheit">ºF</a></span>
+                    <span class="units">
+                        <a href="#" id="to-celsius" type="link" onclick="hideElement()">ºC</a> |
+                        <a href="#" id="to-fahrenheit" type="link" onclick="hideElement()">ºF</a>
+                    </span>
                 </div>
 
                 <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Feels like: <span id="feels-like"></span>°C</li>
+                <li>Feels like: <span id="feels-like"></span><span id="signC">ºC</span> </li>
 
             </ul>
-
+            <div class="row weather-forecast" id="forecast">
+            </div>
 
             <small>
-                <a href="https://github.com/MiandryR/Vanilla-project---Weather-wizard" target="_blank">Open-source
+                <a href="https://github.com/MiandryR/Vanilla-project---Weather-wizard" id="open-source"
+                    target="_blank">Open-source
                     code</a>
                 edited by Mia Ranaivo.
-
             </small>
         </div>
-
     </div>
 </body>
 

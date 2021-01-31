@@ -9,13 +9,18 @@ body {
   margin: 0 auto;
   padding: 0 auto;
   text-align: center;
-  border: 2px red solid;
+  border: 2px rgba(255, 0, 0, 0) solid;
   width: 435px;
   height: 650px;
 }
 
 #card {
   background-image: url("img/parchment.jpg");
+}
+
+ul {
+  padding-left: 0px;
+  list-style-type: none;
 }
 
 .cityName {
@@ -56,23 +61,18 @@ location-form {
   font-family: "Special Elite", cursive;
 }
 
-row {
-  display: inline-grid;
-  padding-left: 0px;
-}
-
 #forecast-day {
   display: inline;
   margin: 0px 15px 5px auto;
   padding-top: 5px;
-  width: 300px;
+  width: 350px;
   height: 40px;
   border-radius: 15px;
   border: none;
   background: #ffffff90;
 }
 
-.typewriter h1 {
+.typewriter #city {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.1em solid rgb(71, 40, 10); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
@@ -112,6 +112,31 @@ small {
   position: bottom;
 }
 
-a {
+#to-fahrenheit,
+#to-celsius,
+#open-source {
   color: #b22222;
+  text-decoration: none;
+}
+
+#icon {
+  width: 100px;
+}
+
+.row.weather-forecast {
+  display: flex;
+  margin-top: 20px;
+  place-content: center;
+}
+
+div.col-2 {
+  width: 60px;
+  height: 85px;
+  border: 0.3px solid #997933;
+  border-radius: 20px;
+  background-color: #ffffff50;
+}
+
+img {
+  width: 50px;
 }
